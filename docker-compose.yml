@@ -1,0 +1,11 @@
+version: '3'
+services:
+  github-code:
+    build: docker
+    container_name: github-code
+    volumes:
+      - .:/usr/app
+      - ./docker/config/php/php.ini:/usr/local/etc/php/php.ini
+    working_dir: /usr/app
+    extra_hosts:
+      - host.docker.internal:host-gateway

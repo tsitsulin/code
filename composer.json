@@ -1,0 +1,36 @@
+{
+    "name": "tsitsulin/code-analyze-pack",
+    "description": "Code analyze pack",
+    "keywords": [
+        "code analyze pack",
+        "static analyze pack"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Tsitsulin",
+            "email": "tsitsulin@gmail.com",
+            "homepage": "https://github.com/tsitsulin"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "*",
+        "vimeo/psalm": "*"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "/docker/",
+            "/example/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tsitsulin\\Code\\Example\\": "example/"
+        }
+    }
+}
